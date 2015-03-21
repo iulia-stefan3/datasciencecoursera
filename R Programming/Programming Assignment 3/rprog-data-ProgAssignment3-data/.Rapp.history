@@ -1,0 +1,424 @@
+install.packages("KernSmooth")
+library(KernSmooth)
+cube <- function(x, n) {#
+  x^3#
+}
+cube(3)
+x <- 1:10#
+if(x > 5) {#
+        x <- 0#
+}
+complete <- function(directory, id = 1:332) {#
+  for(i in id)#
+  {#
+    path<-paste(directory,"/",i,".csv",sep="")#
+  }#
+  mydata <- sapply(path, read.csv)#
+  mydata[2,1][[1]]#
+}
+complete()
+complete <- function(directory, id = 1:332) { for(i in 1:332) {     path<-paste(directory,"/",i,".csv",sep="")     mydata<-read.csv(path) #nobs<-nrow(na.omit(mydata))     nobs<-sum(complete.cases(mydata))     i<-i+1 }   completedata<-c(id,nobs) }
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {     #
+path<-paste(directory,"/",i,".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+completedata<-c(id,nobs) }
+complete("specdata",id=1:332)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) { #
+filename <- sprintf("%03d.csv", i)    #
+path<-paste(directory,"/",filename,".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+completedata<-c(id,nobs) }
+complete("specdata",id=1:332)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) { #
+filename <- sprintf("%03d.csv", i)    #
+path<-paste(directory,"/",filename,sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+completedata<-c(id,nobs) }
+complete("specdata",id=1:332)
+specdata
+paste(specdata,"/","001.csv",sep="")
++ for(i in 1:332) { #
++ filename <- sprintf("%03d.csv", i)
+test <- function(id = 1:332) {for(i in 1:332) { #
++ + filename <- sprintf("%03d.csv", i)}
+test(id = 1:332)
++ test <- function(id = 1:332) {for(i in 1:332) { #
++ + + filename <- sprintf("%03d.csv", i) print filename}
+complete("specdata",id=1:332)
+specdata
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {   #
+path<-paste(directory,"/",id[i],sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+completedata<-c(id,nobs) }
+complete(specdata, id = 1:332)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+completedata<-c(id,nobs) }
+complete(specdata, id = 1:332)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+completedata<-c(id,nobs) }
+complete(specdata, id = 1:332)
+completedata
+complete(specdata, id = 1:332)
+completedata
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata, id = 1:332)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+data.frame(id,nobs) }
+complete(specdata, id = 1:332)
+complete(specdata, id = 1)
+complete(specdata, id = 001)
+complete(specdata, 1)
+complete(specdata, %f1)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in 1:332) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata, 1)
+complete(specdata, id = 1)
+complete(specdata, id = 1:332)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate"])) +  sum(complete.cases(mydata["nitrate"]))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata, 1)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata["sulfate", "nitrate"]))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata, 1)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {   #
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")     #
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata, 1)
+complete("specdata", c(2, 4, 8, 10, 12))
+complete(specdata, c(2, 4, 8, 10, 12))
+complete("specdata", 3)
+complete(specdata, 1)
+complete(specdata, 3)
+complete(specdata, 100)
+complete(specdata, 2)
+complete(specdata, 132)
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+if length(id[i]=1)#
+	path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")#
+	elseif length(id[1]=2)#
+	path<-paste(directory,"/",sprintf("%02d",id[i]),".csv",sep="")#
+	else#
+	path<-paste(directory,"/",id[i],".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+if length(id[i]) = 1#
+	{path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")}#
+	elseif length(id[1])=2#
+	{path<-paste(directory,"/",sprintf("%02d",id[i]),".csv",sep="")}#
+	else#
+	{path<-paste(directory,"/",id[i],".csv",sep="")""#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+if length(id[i]) = 1#
+	{path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")}#
+	elseif length(id[1])=2#
+	{path<-paste(directory,"/",sprintf("%02d",id[i]),".csv",sep="")}#
+	else#
+	{path<-paste(directory,"/",id[i],".csv",sep="")}#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+x <- c(1,2,3)
+length(x[1])
+length(x[2])
+x <- c(1,20,300)
+length(x[2])
+length(x[3])
+nchar(x)
+nchar(x[1])
+nchar(x[2])
+nchar(x[3])
+specdata<-"~/Documents/Iulia/Coursera/R Programming/specdata"#
+#
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+if nchar(id[i]) = 1#
+	{path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")}#
+	else if nchar(id[1])=2#
+	{path<-paste(directory,"/",sprintf("%02d",id[i]),".csv",sep="")}#
+	else#
+	{path<-paste(directory,"/",id[i],".csv",sep="")}#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%0nchar(id[i])d",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete("specdata",1)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",id[i],".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete("specdata",1)
+complete("specdata",100)
+complete("specdata", 100)
+complete("specdata", 200)
+test <- function(id = 1:332) {#
+sprintf("%03d.csv", id)#
+}
+test(1)
+test(100)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,1)
+complete(specdata,2)
+test(2)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03f",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,2)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03s",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,2)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,2)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,2)
+complete(specdata,id = 2)
+complete(specdata,id = 1)
+complete(specdata,id = 100)
+complete(specdata,id = 300)
+id <- 1:332
+id[2]
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03s",as.character(id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03s",as.character(id[i])),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,id = 300)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d",id[i]),".csv",sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,id = 300)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d.csv",id[i]),sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,id = 300)
+complete(specdata,id = 1)
+complete(specdata,id = 12)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03i.csv",id[i]),sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,id = 12)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03f.csv",id[i]),sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata,id = 12)
+id
+class(id)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d.csv",id[i]),sep="")#
+path#
+}
+complete(specdata, id = 1)
+path
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d.csv",id[i]),sep="")#
+path#
+}#
+}
+complete(specdata, id = 1)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d.csv",id[i]),sep="")#
+}#
+path#
+}
+complete(specdata, id = 1)
+complete <- function(directory, id = 1:332) { #
+for(i in id) {#
+paste(directory,"/",sprintf("%03d.csv",id[i]),sep="")#
+}#
+}
+complete(specdata, id = 1)
+complete <- function(directory, id) { #
+for(i in id) {#
+path<-paste(directory,"/",sprintf("%03d.csv",id[i]),sep="")#
+mydata<-read.csv(path)    #
+nobs<-sum(complete.cases(mydata))#
+i<-i+1 }   #
+c(id,nobs) }
+complete(specdata, 1)
+f <- gl(2,2)
+f
+f<-gl(2,4)
+f
+n<-1000
+n
+r<-numeric(n)
+r
+for (i in 1:n) {x<-rnorm(n) r[i]<-mean(x)}
+for (i in 1:n) {x<-rnorm(n) r[i]<-mean(x)}
+for (i in 1:n) {#
+  x<-rnorm(n)#
+  r[i]<-mean(x)#
+}
+r
+?numeric
+set.seed(1)#
+rpois(5, 2)
+set.seed(1)#
+rpois(5, 2)
+?ppois
+best <- function(state, outcome) {#
+    source("rankhospital.R")#
+    rankhospital(state, outcome, "best")#
+}
+best("MD", "pneumonia")
+?tapply
+?length
+?names
+?tapply
+?tail
+?order
+?[]
+source("http://d396qusza40orc.cloudfront.net/rprog%2Fscripts%2Fsubmitscript3.R")
+source("submitscript3.R")
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
+submit()
